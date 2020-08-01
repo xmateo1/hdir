@@ -1,12 +1,12 @@
 ---
-logo: /img/home-jumbotron.jpg
 heroTitle: Hrvatsko društvo za istraživanje raka (HDIR)
-heroSubtitle: HDIR je udruga koja okuplja znanstvene i stručne djelatnike 
-  koji se bave znanstvenim i stručnim radom na području medicine, biologije, 
+heroSubtitle: HDIR je udruga koja okuplja znanstvene i stručne djelatnike koji
+  se bave znanstvenim i stručnim radom na području medicine, biologije,
   biokemije i srodnih znanstvenih područja vezanih uz rak.
+logo: /img/home-jumbotron.jpg
 templateKey: index-page
 title: Superb mojito with a conscience
-image: /img/home-jumbotron.jpg
+image: /img/8352.jpg
 heading: Great coffee with a conscience duude
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
