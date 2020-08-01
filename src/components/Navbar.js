@@ -43,16 +43,16 @@ const Navbar = class extends React.Component {
           </div>
           <div className="hidden py-6 lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
             <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
-              <Link className={buttonClass} to="/about">
+              <Link className={buttonClass} to="/">
                 O društvu
               </Link>
-              <Link className={buttonClass} to="/products">
+              <Link className={buttonClass} to="/">
                 Članstvo
               </Link>
-              <Link className={buttonClass} to="/blog">
+              <Link className={buttonClass} to="/">
                 Aktivnosti
               </Link>
-              <Link className={buttonClass} to="/contact">
+              <Link className={buttonClass} to="/">
                 Kontakt
               </Link>
             </div>

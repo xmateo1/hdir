@@ -1,9 +1,11 @@
 ---
-heroTitle: Hrvatsko društvo za istraživanje raka (HDIR)
-heroSubtitle: HDIR je udruga koja okuplja znanstvene i stručne djelatnike koji
-  se bave znanstvenim i stručnim radom na području medicine, biologije,
-  biokemije i srodnih znanstvenih područja vezanih uz rak.
-logo: /img/home-jumbotron.jpg
+hero:
+  image: /img/8352.jpg
+  subtitle: >
+    HDIR je udruga koja okuplja znanstvene i stručne djelatnike koji
+    se bave znanstvenim i stručnim radom na području medicine, biologije,
+    biokemije i srodnih znanstvenih područja vezanih uz rak.
+  title: Hrvatsko društvo za istraživanje raka (HDIR)
 templateKey: index-page
 title: Superb mojito with a conscience
 image: /img/8352.jpg

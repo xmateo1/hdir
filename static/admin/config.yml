@@ -34,9 +34,7 @@ collections:
         label: "Landing Page"
         name: "index"
         fields:
-          - {label: "Hero Title", name: heroTitle, widget: string }
-          - {label: "Hero Subtitle", name: heroSubtitle, widget: string }
-          - {label: Logo, name: logo, widget: image}
+          - {label: Hero, name: hero, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: text}]}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}

@@ -7,36 +7,37 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
-  heroTitle,
-  heroSubtitle,
+  hero,
 
   image,
   heading,
-  subheading,
   mainpitch,
   description,
   intro,
 }) => (
   <div>
-    <div className="relative" style={{height: '80vh'}}>
+    <div className="relative" style={{height: '90vh'}}>
       <div 
         className="bg-cover bg-right"
         style={{
-          filter: "grayscale(100%) brightness(80%)", 
+          filter: "grayscale(100%) brightness(70%)", 
           backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
           })`,
-          height: "80vh"
+          height: "90vh"
         }}
       >
       </div>
-      <div className="px-8 absolute bottom-0 pb-24 text-white" style={{maxWidth: "42rem"}}>
-        <p className="leading-none font-black text-5xl md:text-6xl mb-4">Hrvatsko društvo za istraživanje raka</p>
-        <p className="text-lg">HDIR je udruga koja okuplja znanstvene i stručne djelatnike koji se bave znanstvenim i stručnim radom na području medicine, biologije, biokemije i srodnih znanstvenih područja vezanih uz rak.</p>
+      <div class="m-auto max-w-7xl">
+        <div className="px-8 absolute bottom-0 pb-24 text-white">
+          <p className="max-w-4xl leading-none font-extrabold text-5xl md:text-7xl mb-4">{hero.title}</p>
+          <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
+          <p className="mt-16"><Link className="btn" to="/">O nama</Link></p>
+        </div>
       </div>
     </div>
     <div
-      className="full-width-image margin-top-0"
+      className="hidden full-width-image margin-top-0"
       style={{
         filter: "grayscale(100%) brightness(80%)", 
         backgroundImage: `url(${
@@ -62,7 +63,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {heroTitle}
+          {hero.title}
         </h1>
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
@@ -75,7 +76,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {heroSubtitle}
+          {hero.subtitle}
         </h3>
       </div>
     </div>
@@ -149,8 +150,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        heroTitle={frontmatter.heroTitle}
-        heroSubtitle={frontmatter.heroSubtitle}
+        hero={frontmatter.hero}
 
         image={frontmatter.image}
         title={frontmatter.title}
@@ -178,8 +178,17 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        heroTitle
-        heroSubtitle
+        hero {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          subtitle
+          title
+        }
         title
         image {
           childImageSharp {
