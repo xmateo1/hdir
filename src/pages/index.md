@@ -14,14 +14,14 @@ intro:
         poticanje znanstvenog i stručnog rada na području medicine,
         biologije,  biokemije i srodnih znanstvenih područja vezanih uz
         istraživanje raka
-    - image: /img/coffee-gear.png
+    - image: /img/cdc-0n1clyj4uwe-unsplash.jpg
       text: |
         povezivanje kliničkih i bazičnih aspekata istraživanja raka
-    - image: /img/tutorials.png
+    - image: /img/3389.jpg
       text: >
         unapređivanje i poboljšavanje komunikacije među različitim
         grupama  poticanjem multidisciplinarnih programa
-    - image: /img/meeting-space.png
+    - image: /img/711.jpg
       text: >
         poticanje inicijativa za istraživačke programe od posebnog značaja
         za  područje raka
