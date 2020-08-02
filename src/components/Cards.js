@@ -39,7 +39,7 @@ const Right = ({card}) => (
 )
 
 const Text = ({position, text}) => (
-    <div className={`bg-white w-80 h-72 rounded-r-lg shadow ${position === "left" ? "rounded-r-lg" : "rounded-l-lg"}`}>
+    <div className={`bg-white w-80 h-72 shadow ${position === "left" ? "rounded-r-lg" : "rounded-l-lg"}`}>
         <p className="p-6 text-xl text-gray-dark">{text}</p>
     </div>
 )

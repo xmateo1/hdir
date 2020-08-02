@@ -20,10 +20,10 @@ export const IndexPageTemplate = ({
       <div 
         className="bg-cover bg-right"
         style={{
-          filter: "grayscale(100%) brightness(70%)", 
           backgroundImage: `url(${
             !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
           })`,
+          filter: "grayscale(100%) brightness(70%)",
           height: "90vh"
         }}
       >
@@ -68,8 +68,7 @@ export const IndexPageTemplate = ({
             lineHeight: '1',
             padding: '0.25em',
           }}
-        >
-          {hero.title}
+        >a
         </h1>
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
@@ -82,7 +81,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {hero.subtitle}
+          a
         </h3>
       </div>
     </div>
@@ -94,7 +93,7 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h1 className="tiHetle">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
@@ -136,7 +135,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  heroTitle: PropTypes.string,
+  hero: PropTypes.object,
   intro: PropTypes.shape({
     cards: PropTypes.array,
   }),
@@ -150,7 +149,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log(frontmatter.hero)
   return (
     <Layout>
       <IndexPageTemplate
