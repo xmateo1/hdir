@@ -2,18 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
+import Cards from '../components/Cards'
 import BlogRoll from '../components/BlogRoll'
+import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
   hero,
+  intro,
 
   image,
   heading,
   mainpitch,
   description,
-  intro,
 }) => (
   <div>
     <section className="relative" style={{height: '90vh'}}>
@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
         }}
       >
       </div>
-      <div class="absolute w-full bottom-0 text-white">
+      <div className="absolute w-full bottom-0 text-white">
         <div className="m-auto max-w-7xl px-8 py-24">
           <h1 className="max-w-4xl leading-none font-extrabold text-5xl md:text-7xl mb-4">{hero.title}</h1>
           <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
@@ -38,68 +38,9 @@ export const IndexPageTemplate = ({
     </section>
     <section className="bg-gray py-24">
       <div class="m-auto max-w-7xl px-8 mb-24">
-        <h2 className="max-w-xl text-gray-dark font-extrabold text-4xl md:text-6xl leading-none">Glavni ciljevi društva</h2>
+        <h2 className="max-w-xl text-gray-dark font-extrabold text-4xl md:text-6xl leading-none">{intro.title}</h2>
       </div>
-      <div className="flex mb-24">
-        <div 
-          className="bg-cover bg-right h-72 shadow"
-          style={{
-            filter: "grayscale(100%)",
-            backgroundImage: `url(${
-              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
-            })`,
-            width: "55vw"
-          }}
-        ></div>
-        <div className="bg-white w-80 h-72 rounded-r-lg shadow">
-          <p className="p-6 text-xl text-gray-dark">poticanje znanstvenog i stručnog rada na području medicine, biologije, biokemije i srodnih znanstvenih područja vezanih uz istraživanje raka</p>
-        </div>
-      </div>
-      <div className="flex mb-24 justify-end">
-        <div className="bg-white w-80 h-72 rounded-l-lg shadow">
-          <p className="p-6 text-xl text-gray-dark">povezivanje kliničkih i bazičnih aspekata istraživanja raka</p>
-        </div>
-        <div 
-          className="bg-cover bg-right h-72 shadow"
-          style={{
-            filter: "grayscale(100%)",
-            backgroundImage: `url(${
-              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
-            })`,
-            width: "55vw"
-          }}
-        ></div>
-      </div>
-      <div className="flex mb-24">
-        <div 
-          className="bg-cover bg-right h-72 shadow"
-          style={{
-            filter: "grayscale(100%)",
-            backgroundImage: `url(${
-              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
-            })`,
-            width: "55vw"
-          }}
-        ></div>
-        <div className="bg-white w-80 h-72 rounded-r-lg shadow">
-          <p className="p-6 text-xl text-gray-dark">unapređivanje i poboljšavanje komunikacije među različitim grupama poticanjem multidisciplinarnih programa</p>
-        </div>
-      </div>
-      <div className="flex mb-24 justify-end">
-        <div className="bg-white w-80 h-72 rounded-l-lg shadow">
-          <p className="p-6 text-xl text-gray-dark">poticanje inicijativa za istraživačke programe od posebnog značaja za područje raka</p>
-        </div>
-        <div 
-          className="bg-cover bg-right h-72 shadow"
-          style={{
-            filter: "grayscale(100%)",
-            backgroundImage: `url(${
-              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
-            })`,
-            width: "55vw"
-          }}
-        ></div>
-      </div>
+      <Cards cards={intro.cards}/>
     </section>
     <div
       className="hidden full-width-image margin-top-0"
@@ -167,7 +108,6 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
@@ -197,16 +137,15 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   heroTitle: PropTypes.string,
-
+  intro: PropTypes.shape({
+    cards: PropTypes.array,
+  }),
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -216,6 +155,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         hero={frontmatter.hero}
+        intro={frontmatter.intro}
 
         image={frontmatter.image}
         title={frontmatter.title}
@@ -223,7 +163,6 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -254,6 +193,19 @@ export const pageQuery = graphql`
           subtitle
           title
         }
+        intro {
+          cards {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            text
+          }
+          title
+        }
         title
         image {
           childImageSharp {
@@ -269,20 +221,6 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
