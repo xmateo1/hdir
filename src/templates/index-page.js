@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <div className="relative" style={{height: '90vh'}}>
+    <section className="relative" style={{height: '90vh'}}>
       <div 
         className="bg-cover bg-right"
         style={{
@@ -28,14 +28,79 @@ export const IndexPageTemplate = ({
         }}
       >
       </div>
-      <div class="m-auto max-w-7xl">
-        <div className="px-8 absolute bottom-0 pb-24 text-white">
-          <p className="max-w-4xl leading-none font-extrabold text-5xl md:text-7xl mb-4">{hero.title}</p>
+      <div class="absolute w-full bottom-0 text-white">
+        <div className="m-auto max-w-7xl px-8 py-24">
+          <h1 className="max-w-4xl leading-none font-extrabold text-5xl md:text-7xl mb-4">{hero.title}</h1>
           <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
-          <p className="mt-16"><Link className="btn" to="/">O nama</Link></p>
+          <p className="my-12"><Link className="btn" to="/">O nama</Link></p>
         </div>
       </div>
-    </div>
+    </section>
+    <section className="bg-gray py-24">
+      <div class="m-auto max-w-7xl px-8 mb-24">
+        <h2 className="max-w-xl text-gray-dark font-extrabold text-4xl md:text-6xl leading-none">Glavni ciljevi društva</h2>
+      </div>
+      <div className="flex mb-24">
+        <div 
+          className="bg-cover bg-right h-72 shadow"
+          style={{
+            filter: "grayscale(100%)",
+            backgroundImage: `url(${
+              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
+            })`,
+            width: "55vw"
+          }}
+        ></div>
+        <div className="bg-white w-80 h-72 rounded-r-lg shadow">
+          <p className="p-6 text-xl text-gray-dark">poticanje znanstvenog i stručnog rada na području medicine, biologije, biokemije i srodnih znanstvenih područja vezanih uz istraživanje raka</p>
+        </div>
+      </div>
+      <div className="flex mb-24 justify-end">
+        <div className="bg-white w-80 h-72 rounded-l-lg shadow">
+          <p className="p-6 text-xl text-gray-dark">povezivanje kliničkih i bazičnih aspekata istraživanja raka</p>
+        </div>
+        <div 
+          className="bg-cover bg-right h-72 shadow"
+          style={{
+            filter: "grayscale(100%)",
+            backgroundImage: `url(${
+              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
+            })`,
+            width: "55vw"
+          }}
+        ></div>
+      </div>
+      <div className="flex mb-24">
+        <div 
+          className="bg-cover bg-right h-72 shadow"
+          style={{
+            filter: "grayscale(100%)",
+            backgroundImage: `url(${
+              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
+            })`,
+            width: "55vw"
+          }}
+        ></div>
+        <div className="bg-white w-80 h-72 rounded-r-lg shadow">
+          <p className="p-6 text-xl text-gray-dark">unapređivanje i poboljšavanje komunikacije među različitim grupama poticanjem multidisciplinarnih programa</p>
+        </div>
+      </div>
+      <div className="flex mb-24 justify-end">
+        <div className="bg-white w-80 h-72 rounded-l-lg shadow">
+          <p className="p-6 text-xl text-gray-dark">poticanje inicijativa za istraživačke programe od posebnog značaja za područje raka</p>
+        </div>
+        <div 
+          className="bg-cover bg-right h-72 shadow"
+          style={{
+            filter: "grayscale(100%)",
+            backgroundImage: `url(${
+              !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
+            })`,
+            width: "55vw"
+          }}
+        ></div>
+      </div>
+    </section>
     <div
       className="hidden full-width-image margin-top-0"
       style={{

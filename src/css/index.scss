@@ -1,6 +1,7 @@
 :root {
     --brown: #E48A57;
     --gray: #EEF2F1;
+    --gray-dark: #696969;
 }
 
 @tailwind base;
@@ -11,4 +12,5 @@
 
 body {
     font-family: "Raleway";
+    @apply tracking-wider;
 }

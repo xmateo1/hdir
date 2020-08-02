@@ -5,12 +5,25 @@ module.exports = {
       backgroundColor: (theme) => ({
         brown: 'var(--brown)',
         gray: 'var(--gray)',
+        'gray-dark': 'var(--gray-dark)',
       }),
       fontSize: {
         '7xl': '5rem',
       },
+      height: {
+        '72': '18rem',
+        '80': '20rem',
+      },
       maxWidth: {
         '7xl': '82rem',
+      },
+      textColor: {
+        gray: 'var(--gray)',
+        'gray-dark': 'var(--gray-dark)',
+      },
+      width: {
+        '72': '18rem',
+        '80': '20rem',
       }
     },
   },
