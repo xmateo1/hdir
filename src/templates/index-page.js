@@ -184,7 +184,7 @@ export const pageQuery = graphql`
         hero {
           image {
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
+              fluid(maxWidth: 4096, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -196,7 +196,7 @@ export const pageQuery = graphql`
           cards {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 2048, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
