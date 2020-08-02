@@ -1,30 +1,31 @@
 ---
+templateKey: index-page
 hero:
   image: /img/8352.jpg
   subtitle: >
-    HDIR je udruga koja okuplja znanstvene i stručne djelatnike koji
-    se bave znanstvenim i stručnim radom na području medicine, biologije,
-    biokemije i srodnih znanstvenih područja vezanih uz rak.
+    HDIR je udruga koja okuplja znanstvene i stručne djelatnike koji se bave
+    znanstvenim i stručnim radom na području medicine, biologije, biokemije i
+    srodnih znanstvenih područja vezanih uz rak.
   title: Hrvatsko društvo za istraživanje raka (HDIR)
 intro:
   cards:
-    - image: /img/coffee.png
+    - image: /img/18424.jpg
       text: >
-        poticanje znanstvenog i stručnog rada na području medicine, biologije, 
-        biokemije i srodnih znanstvenih područja vezanih uz istraživanje raka
+        poticanje znanstvenog i stručnog rada na području medicine,
+        biologije,  biokemije i srodnih znanstvenih područja vezanih uz
+        istraživanje raka
     - image: /img/coffee-gear.png
-      text: >
+      text: |
         povezivanje kliničkih i bazičnih aspekata istraživanja raka
     - image: /img/tutorials.png
       text: >
-        unapređivanje i poboljšavanje komunikacije među različitim grupama 
-        poticanjem multidisciplinarnih programa
+        unapređivanje i poboljšavanje komunikacije među različitim
+        grupama  poticanjem multidisciplinarnih programa
     - image: /img/meeting-space.png
       text: >
-        poticanje inicijativa za istraživačke programe od posebnog značaja za 
-        područje raka
+        poticanje inicijativa za istraživačke programe od posebnog značaja
+        za  područje raka
   title: Glavni ciljevi društva
-templateKey: index-page
 title: Superb mojito with a conscience
 image: /img/8352.jpg
 heading: Great coffee with a conscience duude
