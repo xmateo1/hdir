@@ -29,7 +29,7 @@ intro:
 poster:
   image: /img/hdir6.png
   colors:
-    - code: fff
-    - code: fff
-    - code: fff
+    - code: "#B2DFE5"
+    - code: "#E3F2F5"
+    - code: "#C3E5EB"
 ---
