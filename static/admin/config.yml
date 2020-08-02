@@ -37,7 +37,6 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Hero, name: hero, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: text}]}
           - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Cards, name: cards, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Title, name: title, widget: string}
           - {label: Poster, name: poster, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Colors, name: colors, widget: list, fields: [{label: Code, name: code, widget: text}]}]}
       - file: "src/pages/about/index.md"
         label: "About"
