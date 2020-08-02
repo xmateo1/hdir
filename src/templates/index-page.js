@@ -1,19 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Cards from '../components/Cards'
-import BlogRoll from '../components/BlogRoll'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
   hero,
   intro,
-
-  image,
-  heading,
-  mainpitch,
-  description,
+  poster
 }) => (
   <div>
     <section className="relative" style={{height: '90vh'}}>
@@ -42,92 +38,15 @@ export const IndexPageTemplate = ({
       </div>
       <Cards cards={intro.cards}/>
     </section>
-    <div
-      className="hidden full-width-image margin-top-0"
-      style={{
-        filter: "grayscale(100%) brightness(80%)", 
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        height: "80vh"
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '200px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="text-4xl font-black"
-          style={{
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >a
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          a
-        </h3>
-      </div>
-    </div>
-    <section className="hidden section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="tiHetle">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="bg-gray py-24">
+      <div className="relative">
+        <svg width="100%" viewBox="0 0 2481 714" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1315.78 713.446C232.229 726.131 -533.553 517.876 -781 412.163C-781 284.316 -41.916 -55.6177 1315.78 7.81025C2401.95 58.5526 2610.54 338.825 2579.06 472.618C2609.45 547.608 2399.34 700.76 1315.78 713.446Z" fill={poster.colors[0].code}/>
+          <path d="M1649.51 571.593C641.029 580.903 -71.6973 428.066 -302 350.484C-302 256.658 385.878 7.18255 1649.51 53.7319C2660.42 90.9714 2854.56 296.661 2825.27 394.851C2853.55 449.886 2658 562.283 1649.51 571.593Z" fill={poster.colors[1].code}/>
+          <path d="M1514.51 626.705C506.029 633.456 -206.697 522.62 -437 466.359C-437 398.317 250.878 217.4 1514.51 251.157C2525.42 278.162 2719.56 427.327 2690.27 498.533C2718.55 538.444 2523 619.954 1514.51 626.705Z" fill={poster.colors[2].code}/>
+        </svg>
+        <div className="absolute max-w-7xl">
+          <Img fluid={poster.image.childImageSharp.fluid} alt="" />
         </div>
       </div>
     </section>
@@ -139,12 +58,7 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     cards: PropTypes.array,
   }),
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
+  poster: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
@@ -155,13 +69,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         hero={frontmatter.hero}
         intro={frontmatter.intro}
-
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
+        poster={frontmatter.poster}
       />
     </Layout>
   )
@@ -205,21 +113,18 @@ export const pageQuery = graphql`
           }
           title
         }
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        poster {
+          colors {
+            code
+          }
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1600, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
       }
     }
   }
