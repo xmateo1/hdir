@@ -32,13 +32,13 @@ const Navbar = class extends React.Component {
   }
 
   render() {
-    const buttonClass = "font-black uppercase tracking-wider flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark";
+    const buttonClass = "font-black uppercase tracking-wider flex-no-grow flex-no-shrink relative p-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark";
     return (
       <div>
-        <nav className="absolute px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
+        <nav className="absolute px-6 md:px-8 z-50 select-none bg-grey lg:flex lg:items-stretch w-full">
           <div className="flex flex-no-shrink items-stretch h-12">
-            <Link to="/" className="flex-no-grow flex-no-shrink relative py-4" title="Logo">
-              <img src={logo} alt="Kaldi" className="w-24" />
+            <Link to="/" className="flex-no-grow flex-no-shrink relative py-6" title="HDIR Logo">
+              <img src={logo} alt="HDIR" className="w-24" />
             </Link>
           </div>
           <div className="hidden py-6 lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">

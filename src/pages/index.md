@@ -10,18 +10,22 @@ hero:
 intro:
   cards:
     - image: /img/18424.jpg
+      focus: right
       text: >
         poticanje znanstvenog i stručnog rada na području medicine,
         biologije,  biokemije i srodnih znanstvenih područja vezanih uz
         istraživanje raka
     - image: /img/cdc-0n1clyj4uwe-unsplash.jpg
+      focus: left
       text: |
         povezivanje kliničkih i bazičnih aspekata istraživanja raka
     - image: /img/3389.jpg
+      focus: left
       text: >
         unapređivanje i poboljšavanje komunikacije među različitim
         grupama  poticanjem multidisciplinarnih programa
     - image: /img/711.jpg
+      focus: left
       text: >
         poticanje inicijativa za istraživačke programe od posebnog značaja
         za  područje raka
