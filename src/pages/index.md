@@ -30,12 +30,12 @@ intro:
         poticanje inicijativa za istraživačke programe od posebnog značaja
         za  područje raka
   title: Glavni ciljevi društva
-membership:
-  image: /img/8352.jpg
 poster:
   image: /img/hdir6.png
   colors:
     - code: "#B2DFE5"
     - code: "#E3F2F5"
     - code: "#C3E5EB"
+membership:
+  image: /img/bill-oxford-tr0pplun6pw-unsplash.jpg
 ---
