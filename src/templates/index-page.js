@@ -41,7 +41,6 @@ export const IndexPageTemplate = ({
       <Cards cards={intro.cards} className="hidden md:block"/>
       <SmallCards cards={intro.cards} className="md:hidden"/>
     </section>
-    <img alt="" src={`${!!poster.image.childImageSharp ? poster.image.childImageSharp.fluid.src : poster.image}`}/>
     <section className="bg-gray pb-12">
       <div className="relative">
         <div 
@@ -50,6 +49,7 @@ export const IndexPageTemplate = ({
             padding: "5vw 0"
           }}
         >
+          <img className="z-40 relative" alt="" src={`${!!poster.image.childImageSharp ? poster.image.childImageSharp.fluid.src : poster.image}`}/>
           <div className="text-right mt-6 px-4 xl:px-0">
             <Link className="btn relative z-40" to="/">Prijavi se</Link>
           </div>
