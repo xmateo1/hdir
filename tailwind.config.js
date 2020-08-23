@@ -7,6 +7,9 @@ module.exports = {
         gray: 'var(--gray)',
         'gray-dark': 'var(--gray-dark)',
       }),
+      borderColor: (theme) => ({
+        green: 'var(--green)',
+      }),
       fontSize: {
         '7xl': '5rem',
       },
@@ -18,6 +21,7 @@ module.exports = {
         '7xl': '82rem',
       },
       textColor: {
+        brown: 'var(--brown)',
         gray: 'var(--gray)',
         'gray-dark': 'var(--gray-dark)',
       },

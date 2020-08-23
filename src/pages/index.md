@@ -30,6 +30,8 @@ intro:
         poticanje inicijativa za istraživačke programe od posebnog značaja
         za  područje raka
   title: Glavni ciljevi društva
+membership:
+  image: /img/8352.jpg
 poster:
   image: /img/hdir6.png
   colors:
