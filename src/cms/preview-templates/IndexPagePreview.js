@@ -4,13 +4,22 @@ import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  const entryColors = entry.getIn(['data', 'poster', 'colors'])
+  const colors = entryColors ? entryColors.toJS() : []
 
   if (data) {
     return (
       <IndexPageTemplate
         hero={data.hero || {}}
         intro={data.intro || {}}
-        poster={data.poster || {}}
+        membership={data.membership || {}}
+        poster={{
+          colors: colors,
+          image1: {
+            image: getAsset(entry.getIn(['data', 'poster', 'image1', 'image'])),
+            alt: entry.getIn(['data', 'poster', 'image1', 'alt']),
+          }
+        }}
       />
     )
   } else {

@@ -31,7 +31,9 @@ intro:
         za  područje raka
   title: Glavni ciljevi društva
 poster:
-  image: /img/hdir6.png
+  image1:
+    alt: HDIR-6 poster 
+    image: /img/hdir6.png
   colors:
     - code: "#B2DFE5"
     - code: "#E3F2F5"

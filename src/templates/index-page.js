@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
       <Cards cards={intro.cards} className="hidden md:block"/>
       <SmallCards cards={intro.cards} className="md:hidden"/>
     </section>
-    <section className="bg-gray">
+    <section className="bg-gray pb-12">
       <div className="relative">
         <div 
           className="m-auto max-w-7xl"
@@ -49,7 +49,7 @@ export const IndexPageTemplate = ({
             padding: "5vw 0"
           }}
         >
-          <PreviewCompatibleImage imageInfo={poster.image}/>
+          <PreviewCompatibleImage imageInfo={poster.image1}/>
           <div className="text-right mt-6 px-4 xl:px-0">
             <Link className="btn relative z-40" to="/">Prijavi se</Link>
           </div>
@@ -61,7 +61,7 @@ export const IndexPageTemplate = ({
         </svg>
       </div>
     </section>
-    <section className="relative" style={{height: "40rem"}}>
+    <section className="relative" style={{height: "36rem"}}>
       <div 
         className="bg-cover h-full"
         style={{
@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
       >
       </div>
       <div className="absolute top-0 w-full py-24 px-6">
-        <div className="m-auto max-w-7xl py-24 px-6 md:px-8">
+        <div className="m-auto max-w-7xl px-6 md:px-8">
           <h2 className="max-w-md mb-6 text-gray-dark font-extrabold text-4xl md:text-6xl leading-none">Kako se učlaniti</h2>
           <p className="text-gray-dark text-lg">Za članstvo je potrebno:
             <ul className="list-disc">
@@ -92,8 +92,11 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     cards: PropTypes.array,
   }),
-  membershipImage: PropTypes.object,
-  poster: PropTypes.object,
+  membership: PropTypes.object,
+  poster: PropTypes.shape({
+    colors: PropTypes.array,
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -163,10 +166,13 @@ export const pageQuery = graphql`
           colors {
             code
           }
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1600, quality: 100) {
-                ...GatsbyImageSharpFluid
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }

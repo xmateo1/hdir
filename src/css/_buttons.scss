@@ -1,9 +1,3 @@
 .btn {
-    //@apply w-full block text-center text-xl rounded-full font-extrabold py-3 px-6 select-none;
-    // @apply py-3;
-    @apply px-12 py-4 inline-block text-white font-extrabold bg-brown rounded;
-}
-
-.btn-gray {
-    @apply px-12 py-4 inline-block text-gray-dark font-extrabold bg-white rounded;
+    @apply px-10 py-3 text-sm inline-block text-white font-extrabold bg-brown rounded;
 }
