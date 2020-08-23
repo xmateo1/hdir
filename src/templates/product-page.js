@@ -17,7 +17,9 @@ export const ProductPageTemplate = ({
   testimonials,
   fullImage,
   pricing,
-}) => (
+}) => { 
+  console.log(main.image1)
+  return (
   <div className="content">
     <div
       className="full-width-image-container margin-top-0"
@@ -102,7 +104,7 @@ export const ProductPageTemplate = ({
       </div>
     </section>
   </div>
-)
+)}
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

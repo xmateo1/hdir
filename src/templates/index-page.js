@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby'
 
 import Cards from '../components/Cards'
 import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import SmallCards from '../components/SmallCards'
 
 export const IndexPageTemplate = ({
@@ -12,7 +11,8 @@ export const IndexPageTemplate = ({
   intro,
   membership,
   poster
-}) => (
+}) => {
+  return (
   <div>
     <section className="relative" style={{height: "50rem"}}>
       <div 
@@ -41,6 +41,7 @@ export const IndexPageTemplate = ({
       <Cards cards={intro.cards} className="hidden md:block"/>
       <SmallCards cards={intro.cards} className="md:hidden"/>
     </section>
+    <img alt="" src={`${!!poster.image.childImageSharp ? poster.image.childImageSharp.fluid.src : poster.image}`}/>
     <section className="bg-gray pb-12">
       <div className="relative">
         <div 
@@ -49,7 +50,6 @@ export const IndexPageTemplate = ({
             padding: "5vw 0"
           }}
         >
-          <PreviewCompatibleImage imageInfo={poster.image1}/>
           <div className="text-right mt-6 px-4 xl:px-0">
             <Link className="btn relative z-40" to="/">Prijavi se</Link>
           </div>
@@ -85,7 +85,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
   </div>
-)
+)}
 
 IndexPageTemplate.propTypes = {
   hero: PropTypes.object,
@@ -93,10 +93,7 @@ IndexPageTemplate.propTypes = {
     cards: PropTypes.array,
   }),
   membership: PropTypes.object,
-  poster: PropTypes.shape({
-    colors: PropTypes.array,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }),
+  poster: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
@@ -166,13 +163,10 @@ export const pageQuery = graphql`
           colors {
             code
           }
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1600, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1600, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
