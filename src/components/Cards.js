@@ -26,7 +26,7 @@ const Image = ({image}) => (
 
 const Left = ({card}) => (
     <div className="flex">
-        <Image image={card.image} />
+        <Image image={card.image || {}} />
         <Text position="left" text={card.text} />
     </div>
 )
@@ -34,7 +34,7 @@ const Left = ({card}) => (
 const Right = ({card}) => (
     <div className="flex justify-end">
         <Text position="right" text={card.text} />
-        <Image image={card.image} />
+        <Image image={card.image || {}} />
     </div>
 )
 
