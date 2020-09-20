@@ -11,7 +11,7 @@ const Cards = ({ cards, className }) => (
   </div>
 )
 
-const Image = ({focus, image}) => (
+const Image = ({ focus, image }) => (
     <div 
         className={`bg-cover h-80 shadow ${focus === "left" ? "bg-left" : "bg-right"}`}
         style={{
@@ -24,23 +24,23 @@ const Image = ({focus, image}) => (
     ></div>
 )
 
-const Left = ({card}) => (
+const Left = ({ card }) => (
     <div className="flex">
         <Image focus={card.focus || "bg-center"} image={card.image || {}} />
         <Text position="left" text={card.text} />
     </div>
 )
 
-const Right = ({card}) => (
+const Right = ({ card }) => (
     <div className="flex justify-end">
         <Text position="right" text={card.text} />
         <Image focus={card.focus || "bg-center"} image={card.image || {}} />
     </div>
 )
 
-const Text = ({position, text}) => (
+const Text = ({ position, text }) => (
     <div className={`bg-white w-80 h-80 shadow ${position === "left" ? "rounded-r-lg" : "rounded-l-lg"}`}>
-        <p className="p-6 text-xl text-gray-dark">{text}</p>
+        <p className="p-6 text-xl text-gray-600">{text}</p>
     </div>
 )
 

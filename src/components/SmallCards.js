@@ -12,7 +12,7 @@ const SmallCards = ({ cards, className }) => (
   </div>
 )
 
-const Image = ({focus, image}) => (
+const Image = ({ focus, image }) => (
     <div 
         className={`bg-cover h-48 shadow rounded-t-lg ${focus === "left" ? "bg-left" : "bg-right"}`}
         style={{
@@ -24,9 +24,9 @@ const Image = ({focus, image}) => (
     ></div>
 )
 
-const Text = ({position, text}) => (
+const Text = ({ text }) => (
     <div className="bg-white shadow rounded-b-lg">
-        <p className="p-6 text-xl text-gray-dark">{text}</p>
+        <p className="p-6 text-xl text-gray-600">{text}</p>
     </div>
 )
 

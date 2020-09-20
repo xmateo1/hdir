@@ -27,24 +27,24 @@ export const IndexPageTemplate = ({
       >
       </div>
       <div className="absolute w-full bottom-0 text-white">
-        <div className="m-auto max-w-7xl py-24 px-6 md:px-8">
+        <div className="limit py-24">
           <h1 className="max-w-4xl leading-none font-extrabold text-4xl md:text-7xl mb-4">{hero.title}</h1>
           <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
           <p className="mt-6"><Link className="btn" to="/">O nama</Link></p>
         </div>
       </div>
     </section>
-    <section className="bg-gray py-24">
-      <div class="m-auto max-w-7xl px-6 md:px-8 mb-12 md:mb-24">
-        <h2 className="max-w-xl text-gray-dark font-extrabold text-4xl md:text-6xl leading-none">{intro.title}</h2>
+    <section className="bg-gray-200 py-24">
+      <div className="limit">
+        <h2 className="max-w-xl text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">{intro.title}</h2>
       </div>
-      <Cards cards={intro.cards} className="hidden md:block"/>
-      <SmallCards cards={intro.cards} className="md:hidden"/>
+      <Cards cards={intro.cards} className="hidden md:block mt-12 md:mt-24"/>
+      <SmallCards cards={intro.cards} className="md:hidden mt-12 md:mt-24"/>
     </section>
-    <section className="bg-gray pb-12">
+    <section className="bg-gray-200 pb-12">
       <div className="relative">
         <div 
-          className="m-auto max-w-7xl"
+          className="limit"
           style={{
             padding: "5vw 0"
           }}
@@ -72,15 +72,16 @@ export const IndexPageTemplate = ({
       >
       </div>
       <div className="absolute top-0 w-full py-24 px-6">
-        <div className="m-auto max-w-7xl px-6 md:px-8">
-          <h2 className="max-w-md mb-6 text-gray-dark font-extrabold text-4xl md:text-6xl leading-none">Kako se učlaniti</h2>
-          <p className="text-gray-dark text-lg">Za članstvo je potrebno:
-            <ul className="list-disc">
-              <li>ispuniti <Link to="/" activeClassName="text-brown underline">prijavnicu</Link></li>
-              <li>poslati dokaz uplate za godišnju članarinu</li>
-            </ul>
-            <Link className="btn mt-6" to="/">Postani član</Link>
-          </p>
+        <div className="limit">
+          <h2 className="max-w-md mb-6 text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">Kako se učlaniti</h2>
+          <div className="text-gray-600 text-lg">
+          <p>Za članstvo je potrebno:</p>
+          <ul className="list-disc">
+            <li>ispuniti <Link to="/" activeClassName="text-brown underline">prijavnicu</Link></li>
+            <li>poslati dokaz uplate za godišnju članarinu</li>
+          </ul>
+          <Link className="btn mt-6" to="/">Postani član</Link>
+          </div>
         </div>
       </div>
     </section>

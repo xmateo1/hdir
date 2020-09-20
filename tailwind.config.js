@@ -2,14 +2,6 @@ module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     extend: {
-      backgroundColor: (theme) => ({
-        brown: 'var(--brown)',
-        gray: 'var(--gray)',
-        'gray-dark': 'var(--gray-dark)',
-      }),
-      borderColor: (theme) => ({
-        green: 'var(--green)',
-      }),
       fontSize: {
         '7xl': '5rem',
       },
@@ -20,11 +12,19 @@ module.exports = {
       maxWidth: {
         '7xl': '82rem',
       },
-      textColor: {
-        brown: 'var(--brown)',
-        gray: 'var(--gray)',
-        'gray-dark': 'var(--gray-dark)',
-      },
+      colors: (theme) => ({
+        brown: {
+          900: '#E48A57'
+        },
+        gray: {
+          200: '#EEF2F1',
+          400: '#DCE0DF',
+          600: '#696969'
+        },
+        green: {
+          900: '#2E7D87'
+        }
+      }),
       width: {
         '72': '18rem',
         '80': '20rem',
