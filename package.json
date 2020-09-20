@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "@openfonts/raleway_latin-ext": "^1.44.1",
+    "@openfonts/roboto_latin": "^1.44.1",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-netlify": "^2.2.4",

@@ -1554,6 +1554,11 @@
   resolved "https://registry.yarnpkg.com/@openfonts/raleway_latin-ext/-/raleway_latin-ext-1.44.1.tgz#72377416a9a0de938e3a4d81c13ed73c8319d17b"
   integrity sha512-Ql3CtLv9sQDO/AxGHvIK6O8BsLgOzXznBWRvHh59BS82umaB1araILOBPFl9JftTNJ0Paasd31BDCQEJHt9EFg==
 
+"@openfonts/roboto_latin@^1.44.1":
+  version "1.44.1"
+  resolved "https://registry.yarnpkg.com/@openfonts/roboto_latin/-/roboto_latin-1.44.1.tgz#5faab52f0c68a917395e86d5e9ba354d51a69f99"
+  integrity sha512-SRCi7SI5eSJMNx8LBUgqSuhgnLD7249uBvQ/HW0O5AVhfySIVXr6v1fwi/diRWrEF+tAvMAxpxx7eVxAYAVoMg==
+
 "@pieh/friendly-errors-webpack-plugin@1.7.0-chalk-2":
   version "1.7.0-chalk-2"
   resolved "https://registry.yarnpkg.com/@pieh/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.7.0-chalk-2.tgz#2e9da9d3ade9d18d013333eb408c457d04eabac0"

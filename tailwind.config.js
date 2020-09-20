@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     extend: {
+      fontFamily: {
+        'number': 'Roboto, sans-serif',
+      },
       fontSize: {
         '7xl': '5rem',
       },
@@ -12,7 +15,7 @@ module.exports = {
       maxWidth: {
         '7xl': '82rem',
       },
-      colors: (theme) => ({
+      colors: {
         brown: {
           900: '#E48A57'
         },
@@ -24,7 +27,7 @@ module.exports = {
         green: {
           900: '#2E7D87'
         }
-      }),
+      },
       width: {
         '72': '18rem',
         '80': '20rem',
