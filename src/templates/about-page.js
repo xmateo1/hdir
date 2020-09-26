@@ -58,7 +58,7 @@ export const AboutPageTemplate = ({ goals, hero, membership, title }) => {
       </section>
       <section className="relative" style={{height: "36rem"}}>
         <div 
-          className="bg-cover h-full"
+          className="bg-cover bg-center h-full"
           style={{
             backgroundImage: `url(${
               !!membership.image.childImageSharp ? membership.image.childImageSharp.fluid.src : membership.image
