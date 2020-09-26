@@ -69,6 +69,7 @@ export const AboutPageTemplate = ({ goals, hero, membership, title, content, con
             backgroundImage: `url(${
               !!membership.image.childImageSharp ? membership.image.childImageSharp.fluid.src : membership.image
             })`,
+            filter: "grayscale(100%)",
           }}
         >
         </div>

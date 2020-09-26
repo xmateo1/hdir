@@ -68,6 +68,7 @@ export const IndexPageTemplate = ({
           backgroundImage: `url(${
             !!membership.image.childImageSharp ? membership.image.childImageSharp.fluid.src : membership.image
           })`,
+          filter: "grayscale(100%)",
         }}
       >
       </div>
