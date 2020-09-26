@@ -1,11 +1,12 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
 title: O društvu
 hero:
   image: /img/8352.jpg
   subtitle: >
-    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog svijeta
+    Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
+    svijeta
   title: Udruga znanstvenika i stručnih djelatnika
 goals:
   cards:
@@ -31,5 +32,5 @@ goals:
         za  područje raka
   title: Glavni ciljevi društva
 membership:
-  image: /img/bill-oxford-tr0pplun6pw-unsplash.jpg
+  image: /img/12661.jpg
 ---
