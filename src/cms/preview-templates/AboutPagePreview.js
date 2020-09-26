@@ -4,11 +4,13 @@ import { AboutPageTemplate } from '../../templates/about-page'
 
 const AboutPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
-  
+
   if (data) {
     return (
       <AboutPageTemplate
+        goals={data.goals || {}}
         hero={data.hero || {}}
+        membership={data.membership || {}}
         title={entry.getIn(['data', 'title'])}
         content={widgetFor('body')}
       />

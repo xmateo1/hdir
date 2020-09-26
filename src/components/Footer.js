@@ -39,8 +39,8 @@ const Footer = class extends React.Component {
             </div>
           </div>
           <div className="pb-12 text-sm md:text-md md:mr-12" style={{ maxWidth: '180px' }}>
-            <p>Hrvatsko društvo za istraživanje raka</p>
-            <p className="mt-6">Croatian Association for Cancer Research</p>
+            <p><Link to="/">Hrvatsko društvo za istraživanje raka</Link></p>
+            <p className="mt-6"><Link to="/">Croatian Association for Cancer Research</Link></p>
           </div>
           <div className="text-sm md:mr-12">
             <p>Ruđer Bošković Institute</p>

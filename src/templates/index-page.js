@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({
         <div className="limit py-24">
           <h1 className="max-w-4xl leading-none font-extrabold text-4xl md:text-7xl mb-4">{hero.title}</h1>
           <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
-          <p className="mt-6"><Link className="btn" to="/">O nama</Link></p>
+          <p className="mt-6"><Link className="btn" to="/about">O nama</Link></p>
         </div>
       </div>
     </section>
