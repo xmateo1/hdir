@@ -10,7 +10,7 @@ const Footer = class extends React.Component {
         <div className="limit md:flex">
           <div className="flex font-extrabold md:mr-12 mb-12">
             <div className="flex flex-col mr-12">
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/about">
                 O društvu
               </Link>
               <Link className={linkClass} to="/">

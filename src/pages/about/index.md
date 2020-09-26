@@ -1,19 +1,22 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+hero:
+  image: /img/8352.jpg
+title: O društvu
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Hrvatsko društvo za istraživanje raka (HDIR) udruga je koja okuplja znanstvene i stručne djelatnike koji se bave znanstvenim i stručnim radom na području medicine, biologije, biokemije i srodnih znanstvenih područja vezanih uz rak. Društvo djeluje  kao nacionalno društvo u sklopu Europskog društva za istraživanje raka (European Association for Cancer Research, EACR). EACR djeluje preko 50 godina i najjača je europska neprofitna stručna organizacija koja pokriva kliničke i bazične aspekte istraživanja raka. Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog svijeta. Članstvo EACR-a čine individualni članovi i nacionalna društva. Iz Hrvatske je u tom Društvu registrirano preko 200 članova i Hrvatska je jedina od zemalja sljedbenica bivše države koja je uspjela zadržati predstavnika u Vijeću EACR-a. Vijeće (Konzilij) je jedno od najvažnijih tijela tog Društva, koje čini 25 članova EACR-a, i koji zastupaju pojedine zemlje odnosno njihova društva. Svi članovi EACR-a iz Hrvatske također postaju članovi Hrvatskog društva za istraživanje raka. Isto tako, svi novi članovi Hrvatskog društva za istraživanje raka automatski postaju i članovi EACR-a.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Glavni ciljevi Hrvatskog društva za istraživanje raka su:
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+a)  poticanje znanstvenog i stručnog rada na području medicine, biologije, biokemije i srodnih znanstvenih područja vezanih uz istraživanje raka
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+b)  povezivanje kliničkih i bazičnih aspekata istraživanja raka
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+c)  unapređivanje i poboljšavanje komunikacije među različitim grupama poticanjem multidisciplinarnih programa
+
+d)  poticanje inicijativa za istraživačke programe od posebnog značaja za područje raka.
+
+Ove odrednice su u skladu s misijom EACR-a koja ima cilj unaprijediti bazična istraživanja s jasnijim usmjerenjima prema prevenciji te liječenju i njezi oboljelih i čiji su članovi aktivni znanstvenici, studenti, emeriti, ugledne osobe u područjima vezanima na bilo koji način s rakom, različitim aspektima istraživanja raka, primjene istraživanja i menadžmentu.
+
+HDIR nam daje veću mogućnost suradnje sa srodnim nacionalnim udrugama za istraživanje raka u drugim zemljama u Europi i svijetu (BACR, ASEICA, MOT, AACR i slično). Osim toga, želja nam je pojačati povezanost među članovima EACR u Hrvatskoj, ali prvenstveno povezati istraživače i steći prepoznatljivost djelatnosti istraživanja raka te veću dostupnost Društva za mlađe istraživače.

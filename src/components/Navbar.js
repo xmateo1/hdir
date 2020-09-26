@@ -43,7 +43,7 @@ const Navbar = class extends React.Component {
           </div>
           <div className="hidden py-6 lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
             <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
-              <Link className={buttonClass} to="/">
+              <Link className={buttonClass} to="/about">
                 O društvu
               </Link>
               <Link className={buttonClass} to="/">

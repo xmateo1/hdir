@@ -5,16 +5,22 @@
 @import 'buttons';
 
 body {
-    font-family: "Raleway";
-    @apply tracking-wider;
+  font-family: "Raleway";
+  @apply tracking-wider;
 }
 
 .limit {
-    @apply m-auto max-w-7xl px-6;
+  @apply m-auto max-w-7xl px-6;
 }
 
 @screen md {
-    .limit {
-      @apply px-8;
-    }
+  .limit {
+    @apply px-8;
   }
+}
+
+.content {
+  p {
+    @apply mb-6;
+  }
+}
