@@ -3,7 +3,7 @@ templateKey: about-page
 path: /about
 title: O društvu
 hero:
-  image: /img/8352.jpg
+  image: /img/278.jpg
   subtitle: >
     Nacionalno društvo sa preko 10.000 članova iz preko 90 zemalja iz cijelog
     svijeta
