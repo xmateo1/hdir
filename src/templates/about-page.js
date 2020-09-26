@@ -5,13 +5,10 @@ import { graphql, Link} from 'gatsby'
 import eacr from '../img/eacr.png'
 
 import Cards from '../components/Cards'
-import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 import SmallCards from '../components/SmallCards'
 
-export const AboutPageTemplate = ({ goals, hero, membership, title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
+export const AboutPageTemplate = ({ goals, hero, membership, title }) => {
   return (
     <div className="bg-gray-200">
       <section className="relative" style={{ height: "40rem" }}>
@@ -33,9 +30,6 @@ export const AboutPageTemplate = ({ goals, hero, membership, title, content, con
             <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
           </div>
         </div>
-      </section>
-      <section className="hidden m-auto max-w-5xl p-6 md:p-8">
-        <PageContent className="text-gray-600 content max-w-xl m-auto" content={content} />
       </section>
       <section className="bg-gray-200 py-24">
         <div className="limit text-gray-600 md:flex">
@@ -94,8 +88,6 @@ AboutPageTemplate.propTypes = {
   hero: PropTypes.object,
   membership: PropTypes.object,
   title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
 }
 
 const AboutPage = ({ data }) => {
@@ -107,9 +99,7 @@ const AboutPage = ({ data }) => {
         goals={post.frontmatter.goals}
         hero={post.frontmatter.hero}
         membership={post.frontmatter.membership}
-        contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        content={post.html}
       />
     </Layout>
   )
