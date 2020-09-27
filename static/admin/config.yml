@@ -35,7 +35,7 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Hero, name: hero, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: text}]}
+          - {label: Hero, name: hero, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: text}, { label: Link, name: link, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Page, name: page, widget: string}] }]}
           - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Cards, name: cards, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Poster, name: poster, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Colors, name: colors, widget: list, fields: [{label: Code, name: code, widget: text}]}]}
           - {label: Membership, name: membership, widget: object, fields: [{label: Image, name: image, widget: image}]}

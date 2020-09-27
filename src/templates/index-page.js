@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
 import Cards from '../components/Cards'
+import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import SmallCards from '../components/SmallCards'
 
@@ -14,26 +15,7 @@ export const IndexPageTemplate = ({
 }) => {
   return (
   <div>
-    <section className="relative" style={{height: "50rem"}}>
-      <div 
-        className="bg-cover h-full"
-        style={{
-          backgroundPosition: "64% 50%",
-          backgroundImage: `url(${
-            !!hero.image.childImageSharp ? hero.image.childImageSharp.fluid.src : hero.image
-          })`,
-          filter: "grayscale(100%) brightness(70%)",
-        }}
-      >
-      </div>
-      <div className="absolute w-full bottom-0 text-white">
-        <div className="limit py-24">
-          <h1 className="max-w-4xl leading-none font-extrabold text-4xl md:text-7xl mb-4">{hero.title}</h1>
-          <p className="max-w-4xl text-lg md:text-2xl">{hero.subtitle}</p>
-          <p className="mt-6"><Link className="btn" to="/about">O nama</Link></p>
-        </div>
-      </div>
-    </section>
+    <Hero hero={ hero } />
     <section className="bg-gray-200 py-24">
       <div className="limit">
         <h2 className="max-w-xl text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">{intro.title}</h2>
@@ -137,6 +119,10 @@ export const pageQuery = graphql`
           }
           subtitle
           title
+          link {
+            title
+            page
+          }
         }
         intro {
           cards {

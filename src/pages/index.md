@@ -7,6 +7,9 @@ hero:
     znanstvenim i stručnim radom na području medicine, biologije, biokemije i
     srodnih znanstvenih područja vezanih uz rak.
   title: Hrvatsko društvo za istraživanje raka (HDIR)
+  link:
+    page: /about
+    title: O nama
 intro:
   cards:
     - image: /img/18424.jpg

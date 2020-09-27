@@ -66,9 +66,9 @@ export class MembershipApplicationPageTemplate extends React.Component {
                 <div className="limit">
                     <form
                         className="max-w-3xl"
-                        name="contact"
+                        name="membership"
                         method="post"
-                        action="/contact/thanks/"
+                        action="/membership/thanks/"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                         onSubmit={this.handleSubmit}
@@ -415,7 +415,7 @@ export class MembershipApplicationPageTemplate extends React.Component {
                             </div>
                         </div>
                         <label class="block text-gray-600 flex cursor-pointer">
-                            <input class="mr-2 mt-2 self-start" type="checkbox" required={true} />
+                            <input class="mr-2 self-start relative" type="checkbox" required={true} style={{ top: "5px" }} />
                             <span class="text-md pl-3">
                                 Slažem se da moji podaci navedeni u ovoj pristupnici budu proslijeđeni u European Association for Cancer Research (EACR) u svrhu otvaranja besplatnog korisničkog računa potrebnog za učlanjenje u navedenu udrugu te radi primanja njihove pošte u elektronskom i papirnatom formatu.
                             </span>
