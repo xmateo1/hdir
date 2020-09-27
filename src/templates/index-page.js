@@ -78,10 +78,10 @@ export const IndexPageTemplate = ({
           <div className="text-gray-600 text-lg">
           <p>Za članstvo je potrebno:</p>
           <ul className="list-disc">
-            <li>ispuniti <Link to="/" activeClassName="text-brown underline">prijavnicu</Link></li>
+            <li>ispuniti prijavnicu</li>
             <li>poslati dokaz uplate za godišnju članarinu</li>
           </ul>
-          <Link className="btn mt-6" to="/">Postani član</Link>
+          <Link className="btn mt-6" to="/membership">Postani član</Link>
           </div>
         </div>
       </div>

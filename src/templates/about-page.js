@@ -72,7 +72,7 @@ export const AboutPageTemplate = ({ goals, hero, membership, title }) => {
             <h2 className="max-w-md mb-6 text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">Pridruži se HDIR udruzi</h2>
             <div className="text-gray-600 text-lg">
             <p>Postani ponosni HDIR član u samo nekoliko koraka.</p>
-            <Link className="btn mt-6" to="/">Želim postati član</Link>
+            <Link className="btn mt-6" to="/membership">Želim postati član</Link>
             </div>
           </div>
         </div>

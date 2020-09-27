@@ -46,7 +46,7 @@ const Navbar = class extends React.Component {
               <Link className={buttonClass} to="/about">
                 O društvu
               </Link>
-              <Link className={buttonClass} to="/">
+              <Link className={buttonClass} to="/membership">
                 Članstvo
               </Link>
               <Link className={buttonClass} to="/">

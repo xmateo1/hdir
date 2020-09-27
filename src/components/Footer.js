@@ -13,7 +13,7 @@ const Footer = class extends React.Component {
               <Link className={linkClass} to="/about">
                 O društvu
               </Link>
-              <Link className={linkClass} to="/">
+              <Link className={linkClass} to="/membership">
                 Članstvo
               </Link>
               <Link className={linkClass} to="/">
