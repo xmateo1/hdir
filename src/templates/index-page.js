@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
         }}
       >
       </div>
-      <div className="absolute top-0 w-full py-24 px-6">
+      <div className="absolute top-0 w-full py-24">
         <div className="limit">
           <h2 className="max-w-md mb-6 text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">Kako se učlaniti</h2>
           <div className="text-gray-600 text-lg">

@@ -33,8 +33,8 @@ export const AboutPageTemplate = ({ goals, hero, membership, title }) => {
       </section>
       <section className="bg-gray-200 py-24">
         <div className="limit text-gray-600 md:flex">
-          <h2 className="font-extrabold text-5xl md:w-1/2 md:pr-6 leading-tight" style={{ position: "relative", top: "-0.2em" }}>Dio Europskog društva za istraživanje raka</h2>
-          <p className="text-xl md:w-1/2">Društvo djeluje kao nacionalno društvo u sklopu Europskog društva za istraživanje raka (European Association for Cancer Research, EACR). EACR djeluje preko 50 godina i najjača je europska neprofitna stručna organizacija koja pokriva kliničke i bazične aspekte istraživanja raka. Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog svijeta. Članstvo EACR-a čine individualni članovi i nacionalna društva. Iz Hrvatske je u tom Društvu registrirano preko 200 članova.</p>
+          <h2 className="font-extrabold text-4xl md:text-5xl md:w-1/2 md:pr-6 leading-none" style={{ position: "relative", top: "-0.1em" }}>Dio Europskog društva za istraživanje raka</h2>
+          <p className="mt-6 md:mt-0 text-xl md:w-1/2">Društvo djeluje kao nacionalno društvo u sklopu Europskog društva za istraživanje raka (European Association for Cancer Research, EACR). EACR djeluje preko 50 godina i najjača je europska neprofitna stručna organizacija koja pokriva kliničke i bazične aspekte istraživanja raka. Danas ima oko 10.000 članova iz preko 90 zemalja iz cijelog svijeta. Članstvo EACR-a čine individualni članovi i nacionalna društva. Iz Hrvatske je u tom Društvu registrirano preko 200 članova.</p>
         </div>
       </section>
       <section className="bg-gray-200 py-24">
@@ -67,12 +67,12 @@ export const AboutPageTemplate = ({ goals, hero, membership, title }) => {
           }}
         >
         </div>
-        <div className="absolute top-0 w-full py-24 px-6">
+        <div className="absolute top-0 w-full py-24">
           <div className="limit">
-            <h2 className="max-w-md mb-6 text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">Postani naš član</h2>
+            <h2 className="max-w-md mb-6 text-gray-600 font-extrabold text-4xl md:text-6xl leading-none">Pridruži se HDIR udruzi</h2>
             <div className="text-gray-600 text-lg">
             <p>Postani ponosni HDIR član u samo nekoliko koraka.</p>
-            <Link className="btn mt-6" to="/">Saznaj kako postati član</Link>
+            <Link className="btn mt-6" to="/">Želim postati član</Link>
             </div>
           </div>
         </div>
