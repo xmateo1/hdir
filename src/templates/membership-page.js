@@ -2,11 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link} from 'gatsby'
 
-import eacr from '../img/eacr.png'
-
-import Cards from '../components/Cards'
 import Layout from '../components/Layout'
-import SmallCards from '../components/SmallCards'
+
 
 export const MembershipPageTemplate = ({ goals, hero, membership, title }) => {
   return (
@@ -53,7 +50,7 @@ export const MembershipPageTemplate = ({ goals, hero, membership, title }) => {
         <div className="limit text-gray-600">
             <p className="font-extrabold text-2xl md:text-4xl">Novi članovi</p>
             <p className="mt-6 text-lg">Prijava za članstvo se izvodi kroz online obrazac.</p>
-            <Link className="btn mt-6" to="/">Učlani se</Link>
+            <Link className="btn mt-6" to="/membership/application">Učlani se</Link>
         </div>
       </section>
       <section className="bg-gray-200 py-24">
@@ -67,7 +64,7 @@ export const MembershipPageTemplate = ({ goals, hero, membership, title }) => {
                         </label>
                     </div>
                     <div class="sm:w-2/3">
-                        <input class="overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none disabled" type="text" value="HDIR, Bijenička 54, 10000 Zagreb" />
+                        <input class="overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-600 leading-tight focus:outline-none disabled" type="text" value="HDIR, Bijenička 54, 10000 Zagreb" />
                     </div>
                 </div>
                 <div class="sm:flex sm:items-center mb-6">
@@ -77,7 +74,7 @@ export const MembershipPageTemplate = ({ goals, hero, membership, title }) => {
                         </label>
                     </div>
                     <div class="sm:w-2/3">
-                        <input class="overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none disabled font-number font-light" type="text" value="HR5023600001102084564" />
+                        <input class="overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-600 leading-tight focus:outline-none disabled font-number font-light" type="text" value="HR5023600001102084564" />
                     </div>
                 </div>
                 <div class="sm:flex sm:items-center mb-6">
@@ -87,7 +84,7 @@ export const MembershipPageTemplate = ({ goals, hero, membership, title }) => {
                         </label>
                     </div>
                     <div class="sm:w-2/3">
-                        <input class="overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none disabled" type="text" value="Ime i Prezime – članarina za 2020." />
+                        <input class="overflow-hidden truncate bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-600 leading-tight focus:outline-none disabled" type="text" value="Ime i Prezime – članarina za 2020." />
                     </div>
                 </div>
             </div>

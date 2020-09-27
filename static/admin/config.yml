@@ -57,6 +57,15 @@ collections:
           - {label: Hero, name: hero, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: text}]}
           - {label: Goals, name: goals, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Cards, name: cards, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Membership, name: membership, widget: object, fields: [{label: Image, name: image, widget: image}]}
+      - file: "src/pages/membership/application.md"
+        label: "MembershipApplication"
+        name: "membershipApplication"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "membership-application-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: Hero, name: hero, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: text}]}
+          - {label: Goals, name: goals, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Cards, name: cards, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Membership, name: membership, widget: object, fields: [{label: Image, name: image, widget: image}]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
